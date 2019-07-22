@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <title>Hello Angular!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="controllers.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body >
+   
+<div ng-controller="personCtrl">
+        {{time}}
+    <button ng-click="increaseTime()">click here to increase</button>
+    <br>
+
+    
+    {{date}}
+    <button ng-click="updateDate()">click here to update</button>
+
+
+<table style="align-self: center">
+        <tr>
+          <td>name : </td>
+          <td>
+                <input type="text" name="personName" ng-model="person.name" required> 
+          </td>
+          <td>{{person.name}}</td>
+
+        </tr>
+        <tr>
+          <td>age : </td>
+          <td>
+                <input type="text" name="personAge" ng-model="person.age" required>
+          </td>
+          <td>{{person.age}}</td>
+
+        </tr>
+        <tr>
+          <td>gender : </td>
+          <td>
+                <input type="text" name="age" ng-model="person.gender" required> 
+          </td>
+          <td>{{person.gender}}</td>
+
+        </tr>
+        <tr>
+          <td>car : </td>
+          <td>
+                <select id="car" ng-model="person.car">
+                        <option value="volvo">Volvo</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Ford">Ford</option>
+                      </select>
+                      <br>
+          </td>
+          <td>{{person.car}}</td>
+        </tr>
+      </table>
+
+       
+        {{person.name}}
+        <button ng-click="flipName()">click here to flip the name</button>
+</div>
+</body>
+
+</html>
